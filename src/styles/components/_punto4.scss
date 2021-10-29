@@ -1,0 +1,27 @@
+.punto4__container{
+  width: calc(100% - 10em);
+  max-width: 60em;
+  min-width: 400px;
+  margin: 0 auto;
+  //background: lighten( lightblue, 15);
+  background-image: url(https://www.serargentino.com/public/images/2020/12/16087664810-river-773x458.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 50% 50%;
+  align-items: center;
+  opacity: 0.3;
+  padding-top: 50%;
+  height: 100%;
+  padding: 20px;
+  animation: Tabla 2s ease 0s 1 normal forwards;
+}  
+.punto4__row{
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid rgb(250, 247, 247);
+  background-color: lighten(rgb(247, 136, 136),20);
+  font-weight:bold;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+}

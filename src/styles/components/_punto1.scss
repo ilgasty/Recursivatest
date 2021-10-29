@@ -1,0 +1,99 @@
+.punto1__main-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  
+  border-radius: 15px;
+}
+.punto1__content {
+ 
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-image: url(https://yt3.ggpht.com/ytc/AKedOLS6vA2PTFOpnB0k0eREu-HoWowitr44v07l-PT_=s900-c-k-c0x00ffffff-no-rj);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 50% 50%;
+  padding-top: 50%;
+  height: 100%;
+  padding: 20px;
+}
+.punto__tile {
+  // duration | timing-function | iteration-count | name
+  animation: 2s ease normal entradaTitulo;
+}
+
+.punto__anim{
+	display: block;
+	margin: 0 auto;
+	width: 130px;
+	
+	animation: myAnim 3s ease 0s 1 normal forwards;
+	filter: drop-shadow(5px 5px 10px #f9fafb) ;
+	margin-top: 5px;
+	
+	
+}
+
+@keyframes entradaTitulo {
+	from {
+    height: 0px;
+		opacity: 0;
+		transform: translateY(-25px);
+	}
+
+	to {
+		transform: translateY(0);
+    height:100%;
+		opacity: 1;
+	}
+}
+
+
+@keyframes myAnim {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateY(-45px);
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateY(-24px);
+  }
+
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateY(-12px);
+  }
+
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateY(-6px);
+  }
+
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateY(-4px);
+  }
+
+  25%,
+  55%,
+  75%,
+  87% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,105 @@
+.punto3__container{
+  width: calc(100% - 10em);
+  max-width: 60em;
+  min-width: 400px;
+  margin: 0 auto;
+  background: lighten( lightblue, 15);
+  
+  align-items: center;
+ 
+  padding-top: 50%;
+  height: 100%;
+  padding: 20px;
+  animation: Tabla 2s ease 0s 1 normal forwards;
+}  
+.punto3__tile {
+  // duration | timing-function | iteration-count | name
+  display: flex;
+  align-items: center;
+  justify-content:center
+}
+
+.punto3__div[class^="col-"]{
+  background: pink;
+  border: 1px solid red;
+  padding: 1rem 0;
+  text-align: center;
+}
+.punto3__row{
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid rgb(250, 247, 247);
+  padding: 1rem 0;
+  
+  text-align: center;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+$columns: 12;
+
+@for $i from 1 through $columns{
+  .col-#{$i}{
+    flex: 0 0 100% / $columns * $i;
+  .col-offset-#{$i}{
+    margin-left: 100% / $columns * $i;
+  }
+}
+}
+
+@keyframes punto3__myAnim {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateY(-45px);
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateY(-24px);
+  }
+
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateY(-12px);
+  }
+
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateY(-6px);
+  }
+
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateY(-4px);
+  }
+
+  25%,
+  55%,
+  75%,
+  87% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes punto3__Tabla {
+	from {
+    height: 0px;
+		opacity: 0;
+		transform: translateY(-25px);
+	}
+
+	to {
+		transform: translateY(0);
+    height: 100%;
+		opacity: 1;
+	}
+}
